@@ -464,34 +464,34 @@ def build() -> str:
         f"真正差距是分配：前 10% 计划拿到 {pct(head_share[SELF_KEY])} vs {pct(head_share[BENCH_KEY])} 的预算。",
         "反事实：保持各分层 ROI 不变，仅换成优秀投手的分配比例，整体 ROI 可从 23.7% 到 41.3%。",
     ]
-    summary_html = "".join(f"<li>{esc(item)}</li>" for item in summary_points)
+    hot_from = 2
+    hot_class = ' class="hot"'
+    summary_html = "".join(
+        f"<li{hot_class if index >= hot_from else ''}>{esc(item)}</li>"
+        for index, item in enumerate(summary_points)
+    )
 
     actions = [
         (
-            "阶段一 · 止血（本周）",
+            "本周 · 止损与收缩",
             [
                 "零单止损：单计划消耗 ≥ $20 且当日零单，立即暂停。11-12 这一类占 24.9% 消耗、次日零回收。",
                 "语种收缩：葡语、土语、德语、阿语各砍 50%，预算转给日语、韩语。",
                 "账户止损：XTQ+8-04、ZM+8-01 套用同一止损线，各挪 10%~15% 预算给 RONGKOUL-东八-09。",
-                "阶段目标：rechargeNewRoi 32%~33%。",
             ],
         ),
         (
-            "阶段二 · 降 CPI（2~6 周）",
+            "本周 · 降 CPI",
             [
-                "时段降速：16-24 点消耗占比从 47.8% 压到 35%，增量放到 04-16 点。",
+                "时段降速：16-24 点消耗占比从 47.8% 压到 40%，增量放到 04-16 点。",
                 "CPM 专项：同语种同剧跨账户对比 CPM，检查版位、出价策略、受众重叠；CTR 目标 6.26% 到 7.5%。",
-                "首小时纪律：新计划第 1 小时 ROI<15% 不加预算，第 3 小时仍<20% 直接关。",
-                "阶段目标：CPI≤1.45，rechargeNewRoi 35%~36%。",
             ],
         ),
         (
-            "阶段三 · 结构升级（6~12 周）",
+            "本周 · 预算向头部集中",
             [
-                "扩头部：ROI≥40% 的有效计划从 32 个提到 100 个以上，前 10% 计划消耗占比提到 55%。",
-                "账户与语种多元化：有消耗账户从 12 个扩到 20 个以上。",
-                "存量盘：老用户复充占比从 21% 提到 40%~50%。",
-                "阶段目标：rechargeNewRoi 38%~40%，CPI≤1.28。",
+                "预算搬家：止损释放的预算不回补尾部，全部加给 ROI≥40% 的头部计划，前 10% 计划消耗占比本周从 30% 提到 40% 以上。",
+                "账户与语种：新增预算优先给日语、韩语的已验证账户，有消耗账户从 12 个往上扩。",
             ],
         ),
     ]
@@ -578,6 +578,7 @@ table.data td:first-child{{color:var(--text-primary)}}
 .insight{{background:var(--surface-1);border:1px solid var(--border);border-radius:14px;padding:18px 22px;margin-bottom:16px}}
 .insight ul{{margin:0;padding-left:20px}}
 .insight li{{margin:6px 0}}
+.insight li.hot{{color:var(--critical);font-weight:500}}
 .actions{{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}}
 .action{{background:var(--surface-1);border:1px solid var(--border);border-radius:14px;padding:16px 18px}}
 .action h4{{margin:0 0 8px;font-size:14px}}
@@ -635,6 +636,7 @@ footer{{margin-top:28px;color:var(--text-muted);font-size:12px;border-top:1px so
 
 <h3 class="section-title">执行路线</h3>
 <section class="actions">{actions_html}</section>
+<div class="chart-foot">本周目标：rechargeNewRoi 32%~33%。</div>
 
 <section class="kpis">{kpi_html}</section>
 

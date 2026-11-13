@@ -74,6 +74,7 @@ table.data td:first-child{color:var(--text-primary)}
 .insight{background:var(--surface-1);border:1px solid var(--border);border-radius:14px;padding:18px 22px;margin-bottom:16px}
 .insight ul{margin:0;padding-left:20px}
 .insight li{margin:6px 0}
+.insight li.hot{color:var(--critical);font-weight:500}
 .actions{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
 .action{background:var(--surface-1);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
 .action h4{margin:0 0 8px;font-size:14px}
@@ -116,11 +117,12 @@ footer{margin-top:28px;color:var(--text-muted);font-size:12px;border-top:1px sol
 
 <section class="insight">
   <h3 class="section-title" style="margin-top:0">结论摘要</h3>
-  <ul><li>单日 rechargeNewRoi 23.7% vs 38.7%，差 15.03pp。</li><li>付费率与 ARPPU agent投手更优，差距全部来自 CPI：1.77 vs 0.90。</li><li>头部计划不输：前 10% 计划 ROI 56.4% vs 51.0%。</li><li>真正差距是分配：前 10% 计划拿到 30.0% vs 65.7% 的预算。</li><li>反事实：保持各分层 ROI 不变，仅换成优秀投手的分配比例，整体 ROI 可从 23.7% 到 41.3%。</li></ul>
+  <ul><li>单日 rechargeNewRoi 23.7% vs 38.7%，差 15.03pp。</li><li>付费率与 ARPPU agent投手更优，差距全部来自 CPI：1.77 vs 0.90。</li><li class="hot">头部计划不输：前 10% 计划 ROI 56.4% vs 51.0%。</li><li class="hot">真正差距是分配：前 10% 计划拿到 30.0% vs 65.7% 的预算。</li><li class="hot">反事实：保持各分层 ROI 不变，仅换成优秀投手的分配比例，整体 ROI 可从 23.7% 到 41.3%。</li></ul>
 </section>
 
 <h3 class="section-title">执行路线</h3>
-<section class="actions"><div class="action"><h4>阶段一 · 止血（本周）</h4><ul><li>零单止损：单计划消耗 ≥ $20 且当日零单，立即暂停。11-12 这一类占 24.9% 消耗、次日零回收。</li><li>语种收缩：葡语、土语、德语、阿语各砍 50%，预算转给日语、韩语。</li><li>账户止损：XTQ+8-04、ZM+8-01 套用同一止损线，各挪 10%~15% 预算给 RONGKOUL-东八-09。</li><li>阶段目标：rechargeNewRoi 32%~33%。</li></ul></div><div class="action"><h4>阶段二 · 降 CPI（2~6 周）</h4><ul><li>时段降速：16-24 点消耗占比从 47.8% 压到 35%，增量放到 04-16 点。</li><li>CPM 专项：同语种同剧跨账户对比 CPM，检查版位、出价策略、受众重叠；CTR 目标 6.26% 到 7.5%。</li><li>首小时纪律：新计划第 1 小时 ROI&lt;15% 不加预算，第 3 小时仍&lt;20% 直接关。</li><li>阶段目标：CPI≤1.45，rechargeNewRoi 35%~36%。</li></ul></div><div class="action"><h4>阶段三 · 结构升级（6~12 周）</h4><ul><li>扩头部：ROI≥40% 的有效计划从 32 个提到 100 个以上，前 10% 计划消耗占比提到 55%。</li><li>账户与语种多元化：有消耗账户从 12 个扩到 20 个以上。</li><li>存量盘：老用户复充占比从 21% 提到 40%~50%。</li><li>阶段目标：rechargeNewRoi 38%~40%，CPI≤1.28。</li></ul></div></section>
+<section class="actions"><div class="action"><h4>本周 · 止损与收缩</h4><ul><li>零单止损：单计划消耗 ≥ $20 且当日零单，立即暂停。11-12 这一类占 24.9% 消耗、次日零回收。</li><li>语种收缩：葡语、土语、德语、阿语各砍 50%，预算转给日语、韩语。</li><li>账户止损：XTQ+8-04、ZM+8-01 套用同一止损线，各挪 10%~15% 预算给 RONGKOUL-东八-09。</li></ul></div><div class="action"><h4>本周 · 降 CPI</h4><ul><li>时段降速：16-24 点消耗占比从 47.8% 压到 40%，增量放到 04-16 点。</li><li>CPM 专项：同语种同剧跨账户对比 CPM，检查版位、出价策略、受众重叠；CTR 目标 6.26% 到 7.5%。</li></ul></div><div class="action"><h4>本周 · 预算向头部集中</h4><ul><li>预算搬家：止损释放的预算不回补尾部，全部加给 ROI≥40% 的头部计划，前 10% 计划消耗占比本周从 30% 提到 40% 以上。</li><li>账户与语种：新增预算优先给日语、韩语的已验证账户，有消耗账户从 12 个往上扩。</li></ul></div></section>
+<div class="chart-foot">本周目标：rechargeNewRoi 32%~33%。</div>
 
 <section class="kpis"><div class="kpi"><div class="kpi-name">rechargeNewRoi</div><div class="kpi-values"><span class="v-self">23.7%</span><span class="v-sep">/</span><span class="v-bench">38.7%</span></div><div class="kpi-delta">+15.03pp</div></div><div class="kpi"><div class="kpi-name">CPI</div><div class="kpi-values"><span class="v-self">1.77</span><span class="v-sep">/</span><span class="v-bench">0.90</span></div><div class="kpi-delta">+96%</div></div><div class="kpi"><div class="kpi-name">零单消耗占比</div><div class="kpi-values"><span class="v-self">57.7%</span><span class="v-sep">/</span><span class="v-bench">25.5%</span></div><div class="kpi-delta">+32.2pp</div></div><div class="kpi"><div class="kpi-name">前 10% 计划预算占比</div><div class="kpi-values"><span class="v-self">30.0%</span><span class="v-sep">/</span><span class="v-bench">65.7%</span></div><div class="kpi-delta">-35.8pp</div></div><div class="kpi"><div class="kpi-name">首小时 ROI</div><div class="kpi-values"><span class="v-self">20.0%</span><span class="v-sep">/</span><span class="v-bench">26.0%</span></div><div class="kpi-delta">-6.0pp</div></div><div class="kpi"><div class="kpi-name">可打计划数</div><div class="kpi-values"><span class="v-self">32</span><span class="v-sep">/</span><span class="v-bench">165</span></div><div class="kpi-delta">-133</div></div></section>
 
