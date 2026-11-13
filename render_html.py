@@ -613,14 +613,14 @@ footer{{margin-top:28px;color:var(--text-muted);font-size:12px;border-top:1px so
   <div class="hero-card self">
     <div class="hero-label">{esc(SELF_NAME)} · rechargeNewRoi</div>
     <div class="hero-value">{pct(self_daily["recharge_new_roi"], 2)}</div>
-    <div class="hero-foot">消耗 {money(self_daily["cost"])} · 新客充值 {
+    <div class="hero-foot">消耗 {money(self_daily["cost"])} · D0充值 {
         money(self_daily["new_recharge"])
     } · 新付费 {self_daily["new_payers"]:.0f} 人</div>
   </div>
   <div class="hero-card bench">
     <div class="hero-label">{esc(BENCH_NAME)} · rechargeNewRoi</div>
     <div class="hero-value">{pct(bench_daily["recharge_new_roi"], 2)}</div>
-    <div class="hero-foot">消耗 {money(bench_daily["cost"])} · 新客充值 {
+    <div class="hero-foot">消耗 {money(bench_daily["cost"])} · D0充值 {
         money(bench_daily["new_recharge"])
     } · 新付费 {bench_daily["new_payers"]:.0f} 人</div>
     <div class="gap-badge">差距 {gap * 100:+.2f}pp · 六日口径 {
@@ -636,7 +636,7 @@ footer{{margin-top:28px;color:var(--text-muted);font-size:12px;border-top:1px so
 
 <h3 class="section-title">执行路线</h3>
 <section class="actions">{actions_html}</section>
-<div class="chart-foot">本周目标：rechargeNewRoi 32%~33%。</div>
+<div class="chart-foot">本周目标：rechargeNewRoi 38%。</div>
 
 <section class="kpis">{kpi_html}</section>
 
